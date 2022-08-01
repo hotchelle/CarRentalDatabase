@@ -1,0 +1,60 @@
+
+-- Query 1:
+
+ALTER TABLE RENTAL
+ADD Returned DEFAULT 0;
+
+UPDATE RENTAL 
+SET Returned = 1
+WHERE PaymentDate <> 'NULL';
+
+SELECT * FROM RENTAL;
+
+-- Query 2
+
+CREATE VIEW vRentalInfo AS
+SELECT R.ORDERDATE, R.STARTDATE, R.RETURNDATE, SUM(JULIANDAY(R.RETURNDATE) - JULIANDAY(R.STARTDATE)) AS 'TotalDays',
+V.VehicleID AS 'VIN', V.Description AS 'Vehicle', C.CustID AS 'CustomerID', C.Name AS 'CustomerName', 
+R.TotalAmount AS 'OrderAmount', SUM(R.TOTALAMOUNT) AS 'RemainingBalance',
+CASE V.TYPE
+WHEN 1 THEN 'COMPACT'
+WHEN 2 THEN 'MEDIUM'
+WHEN 3 THEN 'LARGE'
+WHEN 4 THEN 'SUV'
+WHEN 5 THEN 'TRUCK'
+WHEN 6 THEN 'VAN'
+END AS MODEL,
+CASE V.CATEGORY
+WHEN 1 THEN 'LUXURY'
+ELSE 'BASIC'
+END AS TYPE
+FROM CUSTOMER AS C JOIN RENTAL AS R ON C.CustID = R.CustID JOIN VEHICLE AS V ON R.VehicleID = V.VehicleID
+WHERE R.PAYMENTDATE IN (SELECT PAYMENTDATE FROM RENTAL WHERE PAYMENTDATE = 'NULL')
+GROUP BY V.VEHICLEID
+ORDER BY R.STARTDATE;
+
+(2)
+
+SELECT * FROM vRentalInfo;
+
+(3)
+
+SELECT COUNT(OrderDate) AS Number_of_Rows
+FROM vRentalInfo;
+
+Task2:
+
+Requirement:1 
+
+INSERT INTO CUSTOMER (CustID, Name, Phone)
+VALUES (NULL, 'A. Sakallah', '1001846204');
+
+Requirement:2
+
+INSERT INTO VEHICLE VALUES (VehicleID, Description,  year,  type,  category);
+
+Requirement:3
+
+INSERT INTO RENTAL VALUES (CustID, VehicleID, StartDate, OrderDate, RentalType, Qty, ReturnDate, TotalAmount, PaymentDate, Returned);
+
+
