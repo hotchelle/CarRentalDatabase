@@ -1,11 +1,11 @@
 # Car_Rental_Database
 
 This is the car rental database project, in which we are developing a graphical user interface (GUI) in Python by accessing the data from SQL database. <br />
-#How to run
+<h1>How to run<h1/>
 The image below shows how to start the GUI from your local computer's terminal or command prompt.
 ![image](https://user-images.githubusercontent.com/60457052/169611705-5c850102-f080-4df1-9625-93407ab0ae66.png) <br />
 
-#Tools used:
+<h1>Tools used:<h1/>
 
 •	Visual Studio Code (Python) or Text Editor (Notepad++).  <br />
 •	SQLite 3.  <br />
@@ -36,7 +36,7 @@ Commands to launch the GUI and check if your computer has the correct version of
 Once we've verified that our computer has the correct Python version, we can execute the GUI with this command.  <br />
 •	Python3 gui.py   <br />
 
-#Screenshots
+<h1>Screenshots<h1/>
 •	The image below explains how to use the commands to get into the database and evaluate the schemas within the database.  <br />
  
  ![image](https://user-images.githubusercontent.com/60457052/169611556-c17b54cc-ee74-4524-a4f6-ecdda47f8fab.png) <br />
