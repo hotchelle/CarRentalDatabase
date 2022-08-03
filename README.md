@@ -7,7 +7,7 @@ The image below shows how to start the GUI from your local computer's terminal o
 
 ![image](https://user-images.githubusercontent.com/60457052/169611705-5c850102-f080-4df1-9625-93407ab0ae66.png) <br />
 
-# Tools used:
+# Tools used
 
 •	Visual Studio Code (Python) or Text Editor (Notepad++).  <br />
 •	SQLite 3.  <br />
