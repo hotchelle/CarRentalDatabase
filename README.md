@@ -16,7 +16,8 @@ The image below shows how to start the GUI from your local computer's terminal o
 •	Word & Adobe  <br />
 
 
-Steps that are required to install and run your program:  <br />
+# Steps
+
 We were provided with .csv files which were loaded with data regarding the car rental database. To import the .csv files to the database (CarRental2019.db)  <br />
 
 •	 Sqlite3  <br />
