@@ -1,6 +1,7 @@
 # Car_Rental_Database
 
 This is the car rental database project, in which we are developing a graphical user interface (GUI) in Python by accessing the data from SQL database. <br />
+![image](https://user-images.githubusercontent.com/60457052/169611705-5c850102-f080-4df1-9625-93407ab0ae66.png) <br />
 
 Tools used:   <br />
 
